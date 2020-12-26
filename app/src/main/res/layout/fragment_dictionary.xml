@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        android:id="@+id/app_before"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_blue_dark"
+            app:popupTheme="@style/AppTheme"
+            app:contentInsetStartWithNavigation="0dp"
+            >
+
+            <EditText
+                android:background="@drawable/radius_edit_text"
+                android:textColorHint="#9b9a9a"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:id="@+id/edtText"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:hint=" Search" />
+
+            <ImageButton
+                android:paddingLeft="10dp"
+                android:background="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="search"
+                android:src="@drawable/ic_search"
+                android:text="Search" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

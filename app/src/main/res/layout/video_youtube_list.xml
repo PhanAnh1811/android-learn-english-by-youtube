@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imageviewThumbnails"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        android:text="video playlist"
+        android:textColor="@android:color/black"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageviewThumbnails"
+        app:layout_constraintRight_toRightOf="@+id/imageviewThumbnails"
+        app:layout_constraintTop_toBottomOf="@+id/imageviewThumbnails"
+        ></TextView>
+
+    <ImageView
+        android:id="@+id/btnPlay"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageviewThumbnails"
+        app:layout_constraintEnd_toEndOf="@+id/imageviewThumbnails"
+        app:layout_constraintStart_toStartOf="@+id/imageviewThumbnails"
+        app:layout_constraintTop_toTopOf="@+id/imageviewThumbnails"
+        app:srcCompat="@drawable/ic_baseline_play_circle_filled_24"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

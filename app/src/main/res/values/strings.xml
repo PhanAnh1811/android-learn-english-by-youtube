@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Learning English</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_home">Home</string>
+    <string name="title_Theme">Theme</string>
+    <string name="title_History">History</string>
+    <string name="title_Dictionary">Dictionary</string>
+    <string name="title_Bookmark">Bookmark</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    Khai báo danh sách sản phẩm-->
+    <string name="name_product_one">Carbon Loft Kehlmann Black Metal and Wood Desk</string>
+    <string name="product_one">Create an industrial office space with the contemporary Kehlmann desk from Carbon Loft. The black metal frame features a supportive x-shaped stretcher and a weathered-oak table top.
+        Complete the look with your favorite chair and office accessories.</string>
+    <string name="name_product_two">Furniture of America Tali Contemporary 2-tone Leaning Writing Desk</string>
+    <string name="product_two">Add a serene color palette and handy utility to your hallway or office by choosing this leaning desk. This unexpected piece is ideal for compact spaces, bringing you enough room to store a laptop and a cup of coffee at your side. This leaning desk with built-in shelves is a fun alternative for any modern home. The small shelves store as storage options for small office items and decor. Its two-tone appearance accentuates the many open shelves balanced between the support beams, all while enhancing its strikingly modern appearance. This piece is crafted by Furniture of America, with an open frame design that blends into your existing decor.</string>
+    <string name="name_product_three">Argis Black Metal Rustic 1-Drawer Ladder Desk with USB Charging Station by iNSPIRE Q Modern</string>
+    <string name="product_three">Short on space? The Argis Black Metal Rustic 1-Drawer Ladder Desk with USB Charging Station from iNSPIRE Q Modern is the perfect space-saving solution! Rustic and industrial elements come together with surfaces bearing visible wood grain finishes and a sturdy metal frame to hold it all together. The metal frame has a sharp black finish, lending to a more contemporary aesthetic while also easily matching with color schemes. Open and concealed storage options are available with this desk. Two tiered shelves hang above the table top,</string>
+    <string name="name_product_four">Copper Grove Pontica Faux Suede 3-piece Comforter Set</string>
+    <string name="product_four">Stay warm and get a good nights rest with this ultra plush comforter set by Copper Grove. This 3-piece comforter set is made from plush microfiber and features a faux suede top with baffle box stitching. Both comforter and shams feature microfiber faux suede tops and fluffy sherpa backs for a warm and cozy night sleep. This plush comforter set will keep you comfortable all winter long.</string>
+    <string name="name_product_five">Aurora Home Thermal Insulated Blackout Grommet Top Curtain Panel Pair</string>
+    <string name="product_five">Suited for busy households, these curtain panels are made wholly of robust polyester fiber, which is machine-washable for easy maintenance. The curtain solid color is great for adding a pop of color to any setting. Enjoy complete privacy and enhanced insulation in your bedroom by fitting your window with these blackout curtain panels from Aurora Home.</string>
+    <string name="name_product_six">Prominence Home Briarcrest Farmhouse Aged Bronze LED Ceiling Fan</string>
+    <string name="product_six">This picture matched perfectly with my living room, it looks exactly how I envisiond. Great quality!
+        This user was entered into a sweepstakes after submitting their honest review.</string>
+    <string name="name_product_seven">Safavieh Natural Fiber Oceana Casual Border Seagrass Rug</string>
+    <string name="product_seven">Add warmth and a carefree seaside ambiance to your home with the beauty of this seagrass rug from Safavieh Natural Fiber Collection. Bordered in cotton twill, this rug clean, neutral pigments and elegant herringbone design allow for unlimited decorating versatility.</string>
+    <string name="name_product_eight">Wexford Home Morning Chorus Gallery Wrapped Canvas Wall Art</string>
+    <string name="product_eight">Set a calm and serene mood in your living room with the depiction of perched birds on this Morning Chorus wall art from Wexford Home. Created with canvas, this durable artwork boasts rich color and texture. This canvas art comes stretched over a frame to create a contemporary gallery look.</string>
+    <string name="name_product_nine">Large Full-length Floor Mirror with Stand</string>
+    <string name="product_nine">Double check your outfit with ease with this full-length floor mirror. The corrosion-resistant polystyrene frame is fitted with a large center mirror and an integrated stand for easy installation in your space. Choose from six unique finishes to complement your contemporary decor.</string>
+    <string name="name_product_ten">48-inch Corner Two Door Fireplace TV Stand Console</string>
+    <string name="product_ten">Designed with that awkward, desolate living room corner in mind, this 48" fireplace corner TV console is the perfect space-saving piece that will create a warm, entertaining, irresistible space for family movie night.  Crafted from high-grade MDF with a durable laminate wood grain finish, this console is sure to complement your home decor.</string>
+    <string name="favorite">Favorite</string>
+</resources>
