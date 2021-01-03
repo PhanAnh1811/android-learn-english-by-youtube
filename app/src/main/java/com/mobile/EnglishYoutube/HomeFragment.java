@@ -39,14 +39,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 //import java.util.List;
 
-public class Test extends Fragment{
-   public static String API_KEY="AIzaSyC4p23-0Ww7xhYWUpXl4h0zir9qvkIYbn8";
+public class HomeFragment extends Fragment{
+    public static String API_KEY="AIzaSyC4p23-0Ww7xhYWUpXl4h0zir9qvkIYbn8";
     String ID_PLAYLIST="PLwTZpBtz_v2JMulC52XNVzJLA-L_cNI0v";
     String urlGetJson="https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId="+ID_PLAYLIST+"&key="+API_KEY+"&maxResults=50";
     ListView listViewVideo;
     ArrayList<VideoEnglishYoutube> arrayVideo;
     VideoEnglishYoutubeAdapter videoAdapter;
- //   int REQUEST_VIDEO=123;
+    //   int REQUEST_VIDEO=123;
     YouTubePlayerView youTubePlayerView;
 
     // Floating button bookmark
@@ -61,18 +61,50 @@ public class Test extends Fragment{
 // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_test, container, false);
     }
-/*
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        //      super.onViewCreated(view, savedInstanceState);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_test);
+    /*
+        @Override
+        protected void onCreate(@Nullable Bundle savedInstanceState) {
+            //      super.onViewCreated(view, savedInstanceState);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.fragment_test);
+            //      youTubePlayerView=(YouTubePlayerView) findViewById(R.id.myYouTube);
+            //     youTubePlayerView.initialize(API_KEY,this);
+
+            listViewVideo=findViewById(R.id.listviewVideo);
+            arrayVideo =new ArrayList<>();
+
+
+
+            //    videoAdapter=new VideoEnglishYoutubeAdapter(Test.this,R.layout.video_youtube_list,arrayVideo);
+            //     listViewVideo.setAdapter(videoAdapter);
+
+            GetJsonYoutube(urlGetJson);
+
+            // bat su kien click
+            listViewVideo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+
+
+                    Intent intent=new Intent(Test.this,PlayVideoActivity.class);
+                    intent.putExtra("idVideoYoutube",arrayVideo.get(i).getIdVideo());
+                    startActivity(intent);
+
+                }
+            });
+        }
+    */
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        //       setContentView(R.layout.fragment_test);
         //      youTubePlayerView=(YouTubePlayerView) findViewById(R.id.myYouTube);
         //     youTubePlayerView.initialize(API_KEY,this);
 
-        listViewVideo=findViewById(R.id.listviewVideo);
+        BookmarkView=(FloatingActionButton)view.findViewById(R.id.btnBookmarkView);
+        listViewVideo=view.findViewById(R.id.listviewVideo);
         arrayVideo =new ArrayList<>();
-
+        setHasOptionsMenu(true);
 
 
         //    videoAdapter=new VideoEnglishYoutubeAdapter(Test.this,R.layout.video_youtube_list,arrayVideo);
@@ -86,76 +118,44 @@ public class Test extends Fragment{
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-
-                Intent intent=new Intent(Test.this,PlayVideoActivity.class);
+                XuLiChucNang.englishVideoHistory.add(arrayVideo.get(i));
+                Intent intent=new Intent(getContext(),PlayVideoActivity.class);
                 intent.putExtra("idVideoYoutube",arrayVideo.get(i).getIdVideo());
                 startActivity(intent);
 
             }
         });
-    }
-*/
-      public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-            super.onViewCreated(view, savedInstanceState);
-     //       setContentView(R.layout.fragment_test);
-      //      youTubePlayerView=(YouTubePlayerView) findViewById(R.id.myYouTube);
-       //     youTubePlayerView.initialize(API_KEY,this);
 
-            BookmarkView=(FloatingActionButton)view.findViewById(R.id.btnBookmarkView);
-            listViewVideo=view.findViewById(R.id.listviewVideo);
-            arrayVideo =new ArrayList<>();
-            setHasOptionsMenu(true);
-
-
-        //    videoAdapter=new VideoEnglishYoutubeAdapter(Test.this,R.layout.video_youtube_list,arrayVideo);
-       //     listViewVideo.setAdapter(videoAdapter);
-
-            GetJsonYoutube(urlGetJson);
-
-            // bat su kien click
-            listViewVideo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-                    XuLiChucNang.englishVideoHistory.add(arrayVideo.get(i));
-                    Intent intent=new Intent(getContext(),PlayVideoActivity.class);
-                    intent.putExtra("idVideoYoutube",arrayVideo.get(i).getIdVideo());
-                    startActivity(intent);
-
-                }
-            });
-
-            BookmarkView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getContext(), BookmarkView.class);
-                    startActivity(intent);
-                }
-            });
-
-        }
- /*
-    public boolean onCreateOptionsMenu(final Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu,menu);
-        final MenuItem item=menu.findItem(R.id.action_search);
-        androidx.appcompat.widget.SearchView searchView =(androidx.appcompat.widget.SearchView)item.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        BookmarkView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(getContext(), query, Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                videoAdapter.filter(newText.trim());
-                return false;
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), BookmarkView.class);
+                startActivity(intent);
             }
         });
-        return super.onCreateOptionsMenu(menu);
+
     }
-*/
+    /*
+       public boolean onCreateOptionsMenu(final Menu menu) {
+           getMenuInflater().inflate(R.menu.main_menu,menu);
+           final MenuItem item=menu.findItem(R.id.action_search);
+           androidx.appcompat.widget.SearchView searchView =(androidx.appcompat.widget.SearchView)item.getActionView();
+           searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+               @Override
+               public boolean onQueryTextSubmit(String query) {
+                   Toast.makeText(getContext(), query, Toast.LENGTH_SHORT).show();
+                   return false;
+               }
+
+               @Override
+               public boolean onQueryTextChange(String newText) {
+                   videoAdapter.filter(newText.trim());
+                   return false;
+               }
+           });
+           return super.onCreateOptionsMenu(menu);
+       }
+   */
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);

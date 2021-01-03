@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_home:
                     getSupportActionBar().setTitle("Learning English");
-                    fragment = new Test();
+                    fragment = new HomeFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_history:

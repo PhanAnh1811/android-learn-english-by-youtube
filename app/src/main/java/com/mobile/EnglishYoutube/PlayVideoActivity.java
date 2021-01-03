@@ -27,7 +27,7 @@ public class PlayVideoActivity extends YouTubeBaseActivity implements YouTubePla
         Intent intent=getIntent();
         id=intent.getStringExtra("idVideoYoutube");
 
-        youTubePlayerView.initialize(Test.API_KEY,this);
+        youTubePlayerView.initialize(HomeFragment.API_KEY,this);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class PlayVideoActivity extends YouTubeBaseActivity implements YouTubePla
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode==REQUEST_VIDEO){
-            youTubePlayerView.initialize(Test.API_KEY,PlayVideoActivity.this);
+            youTubePlayerView.initialize(HomeFragment.API_KEY,PlayVideoActivity.this);
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
